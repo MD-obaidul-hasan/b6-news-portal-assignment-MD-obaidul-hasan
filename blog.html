@@ -136,16 +136,109 @@
                                         With arrow functions, duplicate named arguments are always, regardless of strict or non-strict mode, invalid.                           
                                         (x, x) => {}
                                         // SyntaxError: duplicate argument names not allowed in this context</p>
-                    <div class="card-actions justify-end">
-                        
+                    <div class="card-actions justify-end">                      
                     </div>
                 </div>
             </div>
             <div class="card card-side bg-base-100 shadow-xl my-4">
                 <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
                 <div class="card-body">
-                    <h2 class="card-title">New movie is released!</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
+                    <h2 class="card-title">JavaScript Template Literals (Template Strings)</h2>
+                    <p>In this tutorial, you will learn about JavaScript Template Literals (Template Strings) with the help of examples.
+                        Template literals (template strings) allow you to use strings or embedded expressions in the form of a string. They are enclosed in backticks ``. For example,                       
+                        const name = 'Jack';
+                        console.log(`Hello ${name}!`); // Hello Jack!
+                        Note: Template literal was introduced in 2015 (also known as ECMAScript 6 or ES6 or ECMAScript 2015). Some browsers may not support the use of template literals. Visit JavaScript Template Literal support to learn more.</p>
+                        <p>Template Literals for Strings
+                            In the earlier versions of JavaScript, you would use a single quote '' or a double quote "" for strings. For example,                           
+                            const str1 = 'This is a string';                           
+                            // cannot use the same quotes
+                            const str2 = 'A "quote" inside a string';  // valid code
+                            const str3 = 'A 'quote' inside a string';  // Error                           
+                            const str4 = "Another 'quote' inside a string"; // valid code
+                            const str5 = "Another "quote" inside a string"; // Error
+                            To use the same quotations inside the string, you can use the escape character \.                           
+                            // escape characters using \
+                            const str3 = 'A \'quote\' inside a string';  // valid code
+                            const str5 = "Another \"quote\" inside a string"; // valid code
+                            Instead of using escape characters, you can use template literals. For example,                           
+                            const str1 = `This is a string`;
+                            const str2 = `This is a string with a 'quote' in it`;
+                            const str3 = `This is a string with a "double quote" in it`;
+                            As you can see, the template literals not only make it easy to include quotations but also make our code look cleaner.</p>
+                            <p>Multiline Strings Using Template Literals
+                                Template literals also make it easy to write multiline strings. For example,                                
+                                Using template literals, you can replace                               
+                                // using the + operator
+                                const message1 = 'This is a long message\n' + 
+                                'that spans across multiple lines\n' + 
+                                'in the code.'                               
+                                console.log(message1)
+                                Run Code
+                                with                                
+                                const message1 = `This is a long message
+                                that spans across multiple lines
+                                in the code.`                               
+                                console.log(message1)
+                                Run Code
+                                The output of both these programs will be the same.                               
+                                This is a long message
+                                that spans across multiple lines
+                                in the code.
+                                </p>
+                                <p>Expression Interpolation
+                                    Before JavaScript ES6, you would use the + operator to concatenate variables and expressions in a string. For example,                                   
+                                    const name = 'Jack';
+                                    console.log('Hello ' + name); // Hello Jack                                   
+                                    With template literals, it's a bit easier to include variables and expressions inside a string. For that, we use the ${...} syntax.                                   
+                                    const name = 'Jack';
+                                    console.log(`Hello ${name}`);                                    
+                                    const result = 4 + 5;                                   
+                                    // template literals used with expressions
+                                    console.log(`The sum of 4 + 5 is ${result}`);                                   
+                                    console.log(`${result < 10 ? 'Too low': 'Very high'}`)
+                                    Run Code
+                                    Output                                    
+                                    Hello Jack
+                                    The sum of  4 + 5 is 9
+                                    Too low
+                                    The process of assigning variables and expressions inside the template literal is known as interpolation.</p>
+                                    <p>Tagged Templates
+                                        Normally, you would use a function to pass arguments. For example,                                       
+                                        function tagExample(strings) {
+                                            return strings;
+                                        }                                       
+                                        // passing argument
+                                        const result = tagExample('Hello Jack');                                       
+                                        console.log(result);
+                                        However, you can create tagged templates (that behave like a function) using template literals. You use tags that allow you to parse template literals with a function.                                        
+                                        Tagged template is written like a function definition. However, you do not pass parentheses () when calling the literal. For example,                                       
+                                        function tagExample(strings) {
+                                            return strings;
+                                        }                                       
+                                        // creating tagged template
+                                        const result = tagExample`Hello Jack`;                                       
+                                        console.log(result);
+                                        Output                                       
+                                        ["Hello Jack"]
+                                        An array of string values are passed as the first argument of a tag function. You could also pass the values and expressions as the remaining arguments. For example,                                      
+                                        const name = 'Jack';
+                                        const greet = true;                                      
+                                        function tagExample(strings, nameValue) {
+                                            let str0 = strings[0]; // Hello
+                                            let str1 = strings[1]; // , How are you?                                        
+                                            if(greet) {
+                                                return `${str0}${nameValue}${str1}`;
+                                            }
+                                        }                                        
+                                        // creating tagged literal
+                                        // passing argument name
+                                        const result = tagExample`Hello ${name}, How are you?`;                                       
+                                        console.log(result);
+                                        Run Code
+                                        Output                                        
+                                        Hello Jack, How are you?
+                                        In this way, you can also pass multiple arguments in the tagged temaplate.</p>
                     <div class="card-actions justify-end">
                         
                     </div>
