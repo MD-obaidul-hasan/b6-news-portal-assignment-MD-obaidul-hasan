@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World NEWS</title>
+    <!-- daisy ui and tailwind css -->
+    <link rel="stylesheet" href="spinner.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="w-10/12 mx-auto">
+        <div class="navbar bg-base-100 mx-5 ">
+            <div class="flex-1 ">
+                <a class="btn btn-ghost normal-case text-xl">World NEWS</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal p-0 gap-3">
+                    <li><a href="index.html" class="btn btn-primary text-white">News</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://placeimg.com/80/80/people" />
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- categori -->
+        <div class="">
+            <ul id="all-menu" class="menu menu-horizontal p-0 place-content-center">
+                <!-- navbarmenu navbarmenu-horizontal bg-base-100 rounded-box -->
+                <!-- <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+                <li><a>Item 3</a></li> -->
+            </ul>
+        </div>
+
+        <div class="p-4 rounded bg-gray-300 text-lg">
+            <p id="search-result"></p>
+        </div>
+        <!-- under catagori -->
+
+        <div class="menu menu-horizontal p-0 navbar bg-base-100 mx-5  ">
+            <div class="menu menu-horizontal p-0">
+                <a class="menuhorizontalbtn menuhorizontalbtn-ghost normal-case text-xl">Sort By View:</a>
+                <li tabindex="0">
+                    <a>
+                        Default
+                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24">
+                            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                        </svg>
+                    </a>
+                    <ul class="p-2">
+                        <!-- <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li> -->
+                    </ul>
+                </li>
+            </div>
+            <div class="menuhorizontalnavbar-end">
+                <a class="menuhorizontalbtn bg-cyan-500  hover:bg-sky-700">Today’s Pick</a>
+                <a class="menuhorizontalbtn">Trending</a>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- modal  -->
+        
+        <div>
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal sm:modal-middle">
+                <div class="modal-box w-11/12 max-w-5xl">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <div class="card" id="modal-section"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="spinner" class="flex justify-center">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <!-- all news  -->
+        <div id="data-section" class="w-10/12 mx-auto"></div>
+    </main>
+
+    <script src="js/news.js"></script>
+</body>
+
+</html>

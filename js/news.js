@@ -1,10 +1,15 @@
 const dataSection = document.getElementById('data-section');
 const searchResult = document.getElementById('search-result');
 const modalDetails = document.getElementById('modal-section');
+const spinner = document.getElementById('spinner');
 
 const loadAllcategories = async () => {
+    spinner.style.display = 'flex';
     const response = await fetch("https://openapi.programming-hero.com/api/news/categories");
     const data = await response.json();
+    if(data){
+        spinner.style.display = 'none';
+    }
     return data;
 }
 
@@ -64,10 +69,14 @@ const searchResultData = (length, category) => {
 
 const renderCategories = async (id, name) => {
     dataSection.innerHTML = '';
+    spinner.style.display = 'flex';
+
     const response = await fetch(`https://openapi.programming-hero.com/api/news/category/${id}`);
     const data = await response.json();
+    if(data){
+        spinner.style.display = 'none';
+    }
     console.log(data?.data);
-
     searchResultData(data?.data.length, name)
 
     data?.data?.forEach(item => {

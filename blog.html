@@ -18,10 +18,10 @@
                 <a class="btn btn-ghost normal-case text-xl">World NEWS</a>
             </div>
             <div class="flex-none">
-                <ul class="menu menu-horizontal p-0">
-                    <li><a>News</a></li>
+                <ul class="menu menu-horizontal p-0 gap-3">
+                    <li><a href="index.html">News</a></li>
 
-                    <li><a>Blog</a></li>
+                    <li><a href="blog.html" class="btn btn-primary text-white">Blog</a></li>
                 </ul>
 
                 <div class="dropdown dropdown-end">
@@ -34,24 +34,18 @@
                 </div>
             </div>
         </div>
-
         <hr>
         <!-- categori -->
-        <div class="">
-            <ul id="all-menu" class="menu menu-horizontal p-0 place-content-center">
-                <!-- navbarmenu navbarmenu-horizontal bg-base-100 rounded-box -->
-                <!-- <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
-                <li><a>Item 3</a></li> -->
-            </ul>
+        <!-- <div class="">
+            <ul id="all-menu" class="menu menu-horizontal p-0 place-content-center"></ul>
         </div>
 
         <div class="p-4 rounded bg-gray-300 text-lg">
             <p id="search-result"></p>
-        </div>
-        <!-- under catagori -->
+        </div> -->
 
-        <div class="menu menu-horizontal p-0 navbar bg-base-100 mx-5  ">
+        <!-- under catagori -->
+        <!-- <div class="menu menu-horizontal p-0 navbar bg-base-100 mx-5  ">
             <div class="menu menu-horizontal p-0">
                 <a class="menuhorizontalbtn menuhorizontalbtn-ghost normal-case text-xl">Sort By View:</a>
                 <li tabindex="0">
@@ -62,10 +56,7 @@
                             <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                         </svg>
                     </a>
-                    <ul class="p-2">
-                        <!-- <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li> -->
-                    </ul>
+                    <ul class="p-2"></ul>
                 </li>
             </div>
             <div class="menuhorizontalnavbar-end">
@@ -74,40 +65,47 @@
             </div>
 
         </div>
-        </div>
+        </div> -->
 
     </header>
 
-    <main>
-        <!-- modal  -->
+    <main class="w-10/12 mx-auto">
+        <!-- blogs -->
         <div>
-            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-            <div class="modal sm:modal-middle">
-                <div class="modal-box w-11/12 max-w-5xl">
-                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <div class="card" id="modal-section">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">Life hack</h2>
-                            <p>How to park your car at your garage?</p>
-
-                        </div>
+            <div class="card card-side bg-base-100 shadow-xl my-4">
+                <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">New movie is released!</h2>
+                    <p>Click the button to watch on Jetflix app.</p>
+                    <div class="card-actions justify-end">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card card-side bg-base-100 shadow-xl my-4">
+                <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">New movie is released!</h2>
+                    <p>Click the button to watch on Jetflix app.</p>
+                    <div class="card-actions justify-end">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card card-side bg-base-100 shadow-xl my-4">
+                <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">New movie is released!</h2>
+                    <p>Click the button to watch on Jetflix app.</p>
+                    <div class="card-actions justify-end">
+                        
                     </div>
                 </div>
             </div>
 
 
-         
-                    <!-- <div class="card"></div> -->
-    
-        
         </div>
-
-        <!-- all news  -->
-        <div id="data-section" class="w-10/12 mx-auto"></div>
     </main>
-
-    <script src="js/news.js"></script>
 </body>
 
 </html>
